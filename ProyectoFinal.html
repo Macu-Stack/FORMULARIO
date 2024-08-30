@@ -1,0 +1,59 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.8/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script src="script.js"></script>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Logo.png" type="image/x-icon">
+  <title>Gestor de Datos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+  </div>
+  <h1>Administrador de Datos</h1>
+</header>
+
+<div class="container">
+<main>
+<form>
+  <input type="text" id="codigo" name="codigo" placeholder="Código" required><br><br>
+  <input type="text" id="nombre" name="nombre" placeholder="Nombre" required><br><br>
+  <input type="text" id="apellido" name="apellido" placeholder="Apellido" required><br><br>
+  <input type="email" id="correo" name="correo" placeholder="Email" required><br><br>
+  <input type="date" id="fecha" name="fecha" placeholder="Fecha" required><br><br>
+  <input type="button" value="Agregar" onclick="agregarDatos()">
+  <input type="button" value="Actualizar" onclick="actualizarDatos()">
+  <input type="button" value="Eliminar" onclick="eliminarDatos()">
+  <input type="button" value="Limpiar" onclick="limpiar()">
+</form>
+
+<div id="tablaDatos"></div>
+<br>
+<div>		
+  <input type="text" id="buscarCodigo" placeholder="Buscar Código">
+  <input type="button" value="Buscar" onclick="buscarCodigo()">
+  <div id="resultadoBusqueda"></div>
+</div>
+<br>
+<div>
+  <input type="file" id="cargarArchivo" accept=".xlsx">
+  <input type="button" value="Cargar Datos" onclick="cargarDatosDesdeExcel()">
+</div>
+
+<input type="button" value="Exportar a Excel" onclick="exportToExcel()" id="exportButton">
+</main>
+</div>
+
+<footer>
+  <p>© 2024 Gestor de Datos. Todos los derechos reservados.</p>
+  <p>Contacto: info@Gestor de Datos	.com</p>
+</footer>
+
+</body>
+</html>

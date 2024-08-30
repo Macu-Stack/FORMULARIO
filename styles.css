@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333; 
+  margin: 0; 
+  padding: 0; 
+  background-color: #666;
+  overflow-y: auto; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+header {
+  background-color: #333; 
+  color: #fff; 
+  padding: 10px; 
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  transition: background-color 0.3s ease; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  overflow-x: hidden; 
+}
+
+.logo img {
+  width: 120px; 
+  height: auto; 
+  margin-right: 10px; 
+  transition: transform 0.3s ease; 
+  border-radius: 30%; 
+}
+
+h1 {
+  margin: 0; 
+  flex-grow: 1; 
+  text-align: center; 
+  transition: color 0.3s ease; 
+}
+
+header:hover {
+  background-color: #444; 
+  transform: translateY(-3px);
+}
+
+.logo img:hover {
+  transform: scale(1.1); 
+}
+
+h1:hover {
+  color: #000000; 
+}
+ 
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #999;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+input[type="button"] {
+  width: calc(100% - 10px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+input[type="button"] {
+  cursor: pointer;
+  background-color:  #555;
+  color: #fff;	
+  border: none;	
+	width: auto;  
+  padding: 8px;	
+  font-size: 14px;
+}
+
+input[type="button"]:hover {
+  background-color: #999;
+}
+
+#tablaDatos {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  table {
+    width: 102%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ccc;
+  }
+
+  table th,
+  table td {
+    padding: 7px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  table th {
+    background-color: #ccc;
+    color: #333;
+    text-transform: uppercase;
+  }
+
+  table td {
+    transition: background-color 0.3s;
+  }
+
+  table td:hover {
+    background-color: #f9f9f9;
+  }
+
+#resultadoBusqueda {
+  margin-top: 10px;
+}
+
+#exportButton {
+  margin-top: 20px;
+}
+
+footer {
+  left: 0; 
+  bottom: 0; 
+  background-color: #333;
+  color: #fff; 
+  padding: 20px; 
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  cursor: pointer;
+}
+
+footer:hover {
+  background-color: #444; 
+  transform: translateY(-3px); 
+  color: #000; 
+}
+
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header .logo img {
+    max-width: 80px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="date"],
+  form input[type="button"] {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  .container {
+    width: 85%;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="date"],
+  form input[type="button"] {
+    width: 48%;
+    margin: 0.5rem 1%;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    width: 70%;
+  }
+}
